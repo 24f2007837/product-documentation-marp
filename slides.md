@@ -93,6 +93,25 @@ style: |
     text-decoration: underline;
   }
   
+  /* Background image slide styling */
+  section.bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  section.bg-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+  
   /* Custom background for specific slides */
   section.title-slide {
     background: linear-gradient(45deg, #1e3c72, #2a5298);
@@ -158,7 +177,7 @@ style: |
 
 ---
 
-<!-- _class: code-bg -->
+<!-- _backgroundImage: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') -->
 
 ## Authentication & Security
 
@@ -378,7 +397,8 @@ const uploadResult = await client.files.upload('./large-file.zip', {
 
 ---
 
-<!-- _backgroundImage: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23667eea;stop-opacity:1" /><stop offset="100%" style="stop-color:%23764ba2;stop-opacity:1" /></linearGradient></defs><rect width="1000" height="1000" fill="url(%23grad)"/><circle cx="200" cy="200" r="100" fill="white" opacity="0.1"/><circle cx="800" cy="300" r="150" fill="white" opacity="0.05"/><circle cx="400" cy="700" r="120" fill="white" opacity="0.08"/></svg>') -->
+<!-- _backgroundImage: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') -->
+<!-- _class: bg-image -->
 
 ## Deployment & Scaling
 
